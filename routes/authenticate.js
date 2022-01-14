@@ -14,6 +14,10 @@ router
         var decodeName = Object.values(decoded)[0]
         console.log(decodeName)
 
+        var heeders = req.headers;
+        console.log('headers ');
+        console.log(heeders);
+
         try {
             const user = await database.query(`
                 SELECT
