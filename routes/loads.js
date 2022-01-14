@@ -8,6 +8,9 @@ const router = express.Router();
 router
     .get('/', async (req, res) => {
         var head = req.headers.authorization;
+        var heeders = req.headers;
+        console.log('headers ');
+        console.log(heeders);
         var token = head.replaceAll('Token token=','');
         //try {
             const user = await database.query(`
