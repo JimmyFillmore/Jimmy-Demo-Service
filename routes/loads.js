@@ -13,7 +13,8 @@ const { token } = require('morgan');
 router
     .get('/', async (req, res) => {
         const head = req.headers.authorization;
-        
+
+        //testing try catch in case the token is not properly formatted with ='token'
         var Token 
         try {
             Token = head.split('=')[1]
@@ -23,13 +24,8 @@ router
             res.end();
         }
 
-        //
-        const heeders = req.headers;
-        console.log('headers ');
-        console.log(heeders);
-        //
-
         const decoded = jwt.decode(Token);
+        //testing try catch in case the payload cant catch the first variable
         var decodedName
         try {
             decodedName = Object.values(decoded)[0];
@@ -39,20 +35,20 @@ router
             res.end();
         }
 
-        console.log(decoded)
-        console.log(decodedName)
+        // if name doesnt come out of token return 401
         if (decodedName == null && decodedName == undefined) return res.sendStatus(401) 
 
         try {
+            // get load JSON
             const loadData = await database.getValue('loads', `
                 SELECT
                     loads
                 FROM
                     user 
                 WHERE
-                    full_name = @full_name
+                    full_name = @decodedName
             `, {
-                full_name: decodedName
+                decodedName: decodedName
             });
 
             console.log(loadData);

@@ -14,26 +14,43 @@ router
         const decodedName = Object.values(decoded)[0];
     
         try {
-            const userData = await database.query(`
+            //get userinfo JSON
+            const userData = await database.getValue('userinfo', `
                 SELECT
                     *
                 FROM
                     user
                 WHERE
-                    full_name = @full_name
+                    full_name = @decodedName
             `, {
-                full_name: decodedName
+                decodedName: decodedName
+            });
+
+            //check if user exists
+            const userExists = await database.exists(`
+                SELECT
+                    *
+                FROM
+                    user
+                WHERE
+                    full_name = @decodedName
+            `, {
+                decodedName: decodedName
             });
             
+            // if user doesnt exist send 401
+            if (!userExists) return res.sendStatus(401);
+
+            //update api key
             await database.execute(`
                 UPDATE 
                     user
                 SET
                     api_token = @token
                 WHERE
-                    full_name = @full_name
+                    full_name = @decodedName
             `, {
-                full_name: decodedName,
+                decodedName: decodedName,
                 token: token
             });
             
