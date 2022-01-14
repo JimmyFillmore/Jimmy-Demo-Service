@@ -1,65 +1,66 @@
 const express = require('express');
 const { load } = require('nodemon/lib/config');
 const database = require('../database')
-const testLoadData = require('../test_data/loads.json');
-
+const jwt = require('jsonwebtoken')
 const router = express.Router();
+
+//
+const testLoadData = require('../test_data/loads.json');
+const { token } = require('morgan');
+//
+
 
 router
     .get('/', async (req, res) => {
-        var head = req.headers.authorization;
-        var heeders = req.headers;
+        const head = req.headers.authorization;
+        
+        var Token 
+        try {
+            Token = head.split('=')[1]
+        } catch (e) {
+            console.error('Error with authorization format');
+            res.status(500).send({'Error': '500 error with authorization format'});
+            res.end();
+        }
+
+        //
+        const heeders = req.headers;
         console.log('headers ');
         console.log(heeders);
-        var token = head.replaceAll('Token token=','');
-        //try {
-            const user = await database.query(`
-                SELECT
-                    *
-                FROM
-                    user 
-                WHERE
-                    api_token = @apiToken
-            `, {
-                apiToken: token
-            });
+        //
 
-            const loadData = await database.query(`
+        const decoded = jwt.decode(Token);
+        var decodedName
+        try {
+            decodedName = Object.values(decoded)[0];
+        } catch (e) {
+            console.error('Error with token');
+            res.status(500).send({'Error': '500 error with token'});
+            res.end();
+        }
+
+        console.log(decoded)
+        console.log(decodedName)
+        if (decodedName == null && decodedName == undefined) return res.sendStatus(401) 
+
+        try {
+            const loadData = await database.getValue('loads', `
                 SELECT
                     loads
                 FROM
                     user 
                 WHERE
-                    api_token = @apiToken
+                    full_name = @full_name
             `, {
-                apiToken: token
+                full_name: decodedName
             });
-            console.log(loadData);
-            if (user.api_token = token) {                
-                res.status(200).json(loadData);
-            }
-            else {
-                console.error('Error retreiving api token');
-                res.status(401).send({'Error': '401 Unauthorized'});
-                res.end('Something wrong sir?');
-            }
 
-            // Check api token vs stored api token
-            /*
-            if (token == 'Token token='+user_key) {
-                const loaddata = require('./loads.json'); //pretty sure this require is busted due to loads.json being outside folder
-                res.status(200).send(loaddata);
-            }
-            else {
-                res.status(401).send({'Error': '401 Unauthorized'});
-            }
-            
-            console.log (`Api key is ${token}`);
-            */
-        /*} catch (e) {
+            console.log(loadData);
+            res.status(200).send(loadData);
+        } catch (e) {
             console.error('Error getting database information');
             res.status(500).send({'Error': '500'});
             res.end();
-        }*/
+        }
     });
 module.exports = router;
