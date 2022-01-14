@@ -31,7 +31,7 @@ router
             });
             
             console.log(user)
-
+            /*
             await database.execute(`
                 INSERT INTO user (
                     full_name,
@@ -50,6 +50,7 @@ router
                 userinfo: body.userinfo,
                 loads: body.loads
             });
+            */
             res.status(200).send(testUserData);
             res.end();
         } catch (e) {
