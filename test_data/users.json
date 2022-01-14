@@ -1,0 +1,359 @@
+{
+    "username": "N4S",
+    "menu":
+    {
+    "menu_items":
+      [
+        {
+        "icon_ref": ".",
+        "type": "home",
+        "label": "🏘 Home"
+        },
+        {
+        "icon_ref": ".",
+        "type": "screen",
+        "label": "✍ Faction Quiz",
+        "properties":
+          {
+            "screen_code": "N4S-Faction-1"
+          }
+        },
+        {
+        "icon_ref": ".",
+        "type": "screen",
+        "label": "🚗 Car Auction",
+        "properties":
+          {
+            "screen_code": "Car-Auction"
+          }
+        },
+        {
+        "icon_ref": ".",
+        "type": "todo",
+        "label": "📂 Tasks"
+        },
+        {
+        "icon_ref": ".",
+        "type": "load-list",
+        "label": "🚔 Races"
+        },
+        {
+        "icon_ref": ".",
+        "type": "scan-flow",
+        "properties":
+          {
+          "add_page_uses_document_type": true,
+          "batch": true,
+          "scan_type": "photograph",
+          "metadata_form_code": "N4S-scan",
+          "batch_prompt":
+            {
+            "affirmative_caption": "MORE!!",
+            "text": "Would you like to take another picture?",
+            "negative_caption": "Nah, I'm good"
+            }
+          },
+        "label": "📸 Car Pics"
+        },
+        {
+        "icon_ref": ".",
+        "type": "media-library",
+        "properties":
+          {
+          "library": "N4S-VIDEO"
+          },
+        "label": "📺 Tutorials"
+        },
+        {
+        "type": "submenu",
+        "label": "💾 Picture Libraries",
+        "icon_ref": ".",
+        "items":
+          [
+            {
+            "type": "media-library",
+            "properties":
+              {
+              "library": "car-library-436"
+              },
+            "label": "🚗 Car Library"
+            },
+            {
+            "type": "media-library",
+            "properties":
+              {
+              "library": "opponents-435"
+              },
+            "label": "☠ Rivals"
+            }
+          ]
+        },
+        {
+        "icon_ref": ".",
+        "type": "news",
+        "properties":
+          {
+          "news_feed": "n4s-192"
+          },
+        "label": "🗞 Racing News"
+        },
+        {
+        "icon_ref": ".",
+        "type": "telephone",
+        "properties":
+          {
+          "telephone_number": "5555555555"
+          },
+        "label": "☎ Emergency Contact"
+        },
+        {
+        "icon_ref": ".",
+        "type": "settings",
+        "label": "🎛 Settings"
+        }
+      ]
+    },
+    "bypass":
+      {
+      "credential_id": "4877",
+      "credential_token": "b6prjKZ9HkCPu1699Sf1Ky5P7EWU0hRJ8RJbdkFwJR4",
+      "driver_id": "87371",
+      "vehicle_id": "114252",
+      "server_url": "https://eleos-kube.test.roadflo.com/bus06/eventrepl/",
+      "provider": "drivewyze"
+      },
+    "custom_settings_form_code": "SETTINGS-N4S",
+    "theme":
+      {
+      "primary_color": "#31199E"
+      },
+    "dashboard":
+      {
+      "dashboard_items":
+        [
+          {
+          "header": null,
+          "type": "info",
+          "properties":
+            {
+            "info_image":
+              {
+              "url": "https://imgur.com/2vJF3uQ.png"
+              }
+            }
+          },
+          {
+          "header": null,
+          "type": "info",
+          "properties":
+            {
+            "info_image":
+              {
+              "url": "https://imgur.com/FHsmHVH.png"
+              }
+            }
+          },
+          {
+          "header": null,
+          "type": "info",
+          "properties":
+            {
+            "info_image":
+              {
+              "url": "https://imgur.com/t7thqmw.png"
+              }
+            }
+          },
+          {
+          "header": "",
+          "type": "info",
+          "properties":
+            {
+            "info_image":
+              {
+              "url": "https://imgur.com/kdJlsiw.png"
+              }
+            }
+          },
+          {
+          "header": "🕴 My Avatar",
+          "type": "info",
+          "properties":
+            {
+            "info_image":
+              {
+              "url": "https://imgur.com/tRso7TJ.png",
+              "position": "bottom"
+            },
+            "action_codes":
+              [
+              "N4S-update-info"
+            ],
+            "text": "Name: Victor Salah\nFaction: Lucian⚡\nStyle: Exotic\nNet Worth: 💲100,000\nActive Racer: Yes✔"
+            },
+          "icon_ref": ""
+          },
+          {
+          "header": "🚘 My Car",
+          "type": "my-truck",
+          "properties":
+            {
+            "truck_locator_label": "Safehouse"
+            },
+          "icon_ref": ""
+          },
+          {
+          "header": "Alfa Romeo Brera",
+          "type": "info",
+          "properties":
+            {
+            "info_image":
+              {
+              "url": "https://imgur.com/UqdUmOr.png"
+              }
+            },
+          "icon_ref": ""
+          },
+          {
+          "header": "🚔 Races",
+          "type": "loads",
+          "properties":
+            {
+            "show_current_load": true,
+            "show_current_stop": true
+            },
+          "icon_ref": ""
+          },
+          {
+          "header": "🚘 Car of the Day",
+          "type": "carousel",
+          "properties":
+            {
+            "carousel":
+              {
+              "items":
+                [
+                  {
+                  "image":
+                      {
+                      "url": "https://imgur.com/VvUgaac.png"
+                      }
+                  },
+                  {
+                  "image":
+                      {
+                      "url": "https://imgur.com/SfhrBZd.png"
+                      }
+                  }
+                ],
+              "rotation_time": 5
+              }
+            },
+          "icon_ref": ""
+          },
+          {
+          "header": "⌚ Time Left",
+          "type": "hos",
+          "icon_ref": ""
+          },
+          {
+          "header": "📂 Tasks",
+          "type": "todo",
+          "icon_ref": ""
+          },
+          {
+            "header": "📫 Messages",
+            "type": "messages",
+            "icon_ref": ""
+          },
+          {
+          "header": "🗞 Racing News",
+          "icon_ref": "",
+          "type": "news",
+          "properties":
+            {
+            "news_feed": "n4s-192"
+            }
+          },
+          {
+            "header": "💰 Pay Day",
+            "type": "payroll",
+            "properties":
+              {
+              "payroll_summary":
+                [
+                  {
+                  "label_type":"string",
+                  "label": "Grandma's Trust Fund",
+                  "value_type": "currency",
+                  "value": "$10,000"
+                  },
+                  {
+                    "label_type":"string",
+                    "label": "Savings",
+                    "value_type": "currency",
+                    "value": "$2,000"
+                  },
+                  {
+                  "label_type":"string",
+                  "label": "First Race Win",
+                  "value_type": "currency",
+                  "value": "$600"
+                  }
+                ]
+              },
+            "icon_ref": ""
+          }
+        ],
+      "logo_ref": "private/test"
+      },
+    "full_name": "Need4Speed",
+    "api_token": "0PTIfCgMRqgEXzmil4mppKQKNq+XZ35CqsSQz05Efd9LB6bf2u2w",
+    "telematics":
+      {
+      "username": "Victor Salah",
+      "provider": "geotab",
+      "hours_of_service_rules": "America7Day"
+      },
+    "custom":
+    {
+      "paychecks":
+        [
+          {
+          "check_date": "2019-01-15T00:08:02",
+          "amount": "$10,000",
+          "details_title": "Grandma's Trust Fund",
+          "details":
+            [
+              {
+              "label": "Bank Transfer",
+              "value": "Happy Birthday Sweetums!",
+              "value_type": "string",
+              "details_title": "details_title",
+              "details_inline": true
+              }
+            ]
+          },
+          {
+          "check_date": "2020-09-30T00:11:10",
+          "amount": "$600",
+          "details_title": "Race Winnings",
+          "details":
+            [
+              {
+              "label": "Entry Return Cost",
+              "value": "$50",
+              "value_type": "currency",
+              "details_title": "details_title",
+              "details_inline": true
+              },
+              {
+              "label": "Date",
+              "value": "2020-09-30T00:11:10",
+              "value_type": "date"
+              }
+            ]
+          }
+        ]
+    }
+  }

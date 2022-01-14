@@ -1,0 +1,324 @@
+[
+    {
+    "prevent_trip_edits": true,
+    "attachments":
+      [
+        {
+          "id": "59ad029d-5503-4963-9144-360497710e98"
+        }
+      ],
+    "trip_planner_enabled": true,
+    "consignee":
+      {
+        "stop_type_label": "",
+        "stop_number": 1,
+        "postal_code": "29678",
+        "stop_type": "David Creek",
+        "city": "Seneca",
+        "current": true,
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.694049,
+            "longitude": -82.879218
+          },
+        "address": "2559-2529 Davis Creek Rd",
+        "name": "🚥 Start Line",
+        "identifiers": []
+      },
+    "actions":
+      [
+        {
+        "code": "N4S-Register",
+        "icon_ref": "referral",
+        "label": "Register for Race",
+        "button_color": "#DE1010",
+        "type": "transaction-editor",
+        "properties":
+          {
+            "workflow_action": true,
+            "form_code": "N4S-Register"
+          }
+        }
+      ],
+    "stop_list_label": "🚏 Checkpoints",
+    "stickers":
+      [
+        {
+          "color": "#FF0000",
+          "icon_ref": "sticker_refrigerated",
+          "label": "Slick Roads 💧"
+        }
+      ],
+    "id": "1",
+    "customer_name": "🗡 Challenger: Marcelo Viventi - Lamborghini Murciélago",
+    "hazmat": true,
+    "display_identifier": "The Airport Bypass",
+    "stops":
+      [
+        {
+        "stop_number": 2,
+        "stop_type": "Shiloh",
+        "city": "Seneca",
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.683838,
+            "longitude": -82.909116
+          },
+        "name": "Checkpoint",
+        "identifiers":[]
+        },
+        {
+        "stop_number": 3,
+        "stop_type": "Oconee Airport",
+        "city": "Seneca",
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.671637,
+            "longitude": -82.882189
+          },
+        "name": "Checkpoint",
+        "identifiers":[]
+        },
+        {
+        "stop_number": 4,
+        "stop_type": "Seneca Creek Meadow",
+        "city": "Seneca",
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.683111,
+            "longitude": -82.865519
+          },
+        "name": "Checkpoint",
+        "identifiers":[]
+        }
+      ],
+    "current": true,
+    "workflow_code": "NEW-WORKFLOW-1",
+    "special_notes": "Tier 3 drifter, 🗡 Marcelo Viventi, is challenging you for the Keowee territory in Seneca. Marcelo is part of the Janus faction and drives a Lamborghini Murciélago, a swift tier 3 exotic. This 1v1 race is a high speed drift race down Davis Creek Road. Be careful, the 🚔police have heard there is a race today and will be on the lookout for speeding cars.",
+    "load_status_title": "Status:",
+    "sort": 1,
+    "load_status_label": "Race Available",
+    "load_status": "RaceAvailable",
+    "active": true,
+    "shipper":
+      {
+        "stop_type_label": "",
+        "stop_number": 5,
+        "stop_type": "Keowee",
+        "city": "Seneca",
+        "current": false,
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.700523,
+            "longitude": -82.891175
+          },
+        "name": "🏁 Finish Line",
+        "identifiers": []
+      },
+    "display_identifier_title": "Race:",
+    "order_number": "1-1"
+    },
+    {
+    "prevent_trip_edits": true,
+    "attachments":
+      [
+        {
+          "id": "d6bbf976-463f-4ec9-9f22-72a5217ea28b"
+        }
+      ],
+    "trip_planner_enabled": true,
+    "consignee":
+      {
+        "stop_type_label": "",
+        "stop_number": 1,
+        "stop_type": "Poundingmill Branch",
+        "city": "Brevard",
+        "current": true,
+        "state": "NC",
+        "location":
+          {
+            "latitude": 35.340810,
+            "longitude": -82.790380
+          },
+        "name": "🚥 Start Line",
+        "identifiers": []
+      },
+    "stop_list_label": "🚏 Checkpoints",
+    "stickers":
+      [
+        {
+          "color": "#FF0000",
+          "icon_ref": "sticker_warning",
+          "label": "VERY DANGEROUS RACE ☠"
+        },
+        {
+          "color": "#228B22",
+          "icon_ref": "sticker_payment",
+          "label": "Racing for Pinks 🎀"
+        }
+      ],
+    "id": "2",
+    "customer_name": "🛤 Challenger: Roy Sterling - Keonigsegg CCX",
+    "hazmat": true,
+    "display_identifier": "The Mountain Pass",
+    "stops":
+      [
+        {
+          "stop_number": 2,
+          "stop_type": "Gumstand Gap",
+          "city": "Brevard",
+          "state": "NC",
+          "location":
+            {
+              "latitude": 35.310003,
+              "longitude": -82.800652
+            },
+          "name": "Checkpoint",
+          "identifiers": []
+        }
+      ],
+    "current": false,
+    "special_notes": "The legendary racer, 🛤 Roy Sterling, is challenging you to a high speed mountain chase. This is a high stakes race for pink slips 🎀, meaning the loser has to give up their car. Roy drives a Keonigsegg CCX, a tier 3 exotic, which has the best handling in its class, and is a leader in the Ekaterina Faction. You will be given a 10 second head start. Make it to the bottom of the mountain pass before him. If he catches up or you crash, you lose.",
+    "load_status_title": "Status:",
+    "sort": 2,
+    "load_status_label": "Race Available",
+    "load_status": "RaceAvailable",
+    "active": true,
+    "shipper":
+      {
+        "stop_type_label": "",
+        "stop_number": 3,
+        "stop_type": "Chestnut Creek",
+        "city": "Brevard",
+        "current": false,
+        "state": "NC",
+        "location":
+          {
+            "latitude": 35.291694,
+            "longitude": -82.773389
+          },
+        "name": "🏁 Finish Line",
+        "identifiers": []
+      },
+    "display_identifier_title": "Race:",
+    "order_number": "2-1"
+    },
+    {
+    "prevent_trip_edits": true,
+    "attachments":
+      [
+        {
+          "id": "6b6130ca-a883-4c71-8b5f-eb36c0595ff4"
+        }
+      ],
+    "trip_planner_enabled": true,
+    "consignee":
+      {
+        "stop_type_label": "",
+        "stop_number": 1,
+        "stop_type": "Harts Cove",
+        "city": "Seneca",
+        "current": true,
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.690620,
+            "longitude": -82.866079
+          },
+        "name": "🚥 Start Line",
+        "identifiers": []
+      },
+    "stop_list_label": "🚏 Checkpoints",
+    "stickers":
+      [
+      ],
+    "id": "3",
+    "customer_name": "⚓ Challenger: Jesse Frasier - Shelby GT500",
+    "hazmat": true,
+    "display_identifier": "Drag Race",
+    "current": false,
+    "special_notes": "This race is a drag race versus ⚓ Jesse Frasier. Jesse drives the Shelby GT500, a tier 3 muscle car, for the Tomas faction. The course is a straight shot, speed and acceleration are all that matters.",
+    "load_status_title": "Status:",
+    "sort": 2,
+    "load_status_label": "Race Available",
+    "load_status": "RaceAvailable",
+    "active": true,
+    "shipper":
+      {
+        "stop_type_label": "",
+        "stop_number": 3,
+        "stop_type": "Chestnut Creek",
+        "city": "Seneca",
+        "current": false,
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.698284,
+            "longitude": -82.885559
+          },
+        "name": "🏁 Finish Line",
+        "identifiers": []
+      },
+    "display_identifier_title": "Race:",
+    "order_number": "3-1"
+  },
+    {
+      "prevent_trip_edits": true,
+      "attachments":
+      [
+        {
+          "id": "08130570-fb06-4fd5-9c37-a797a436cfbd"
+        }
+      ],
+      "trip_planner_enabled": true,
+      "consignee":
+      {
+        "stop_type_label": "",
+        "stop_number": 1,
+        "stop_type": "Northlake",
+        "city": "Clemson",
+        "current": true,
+        "state": "SC",
+        "location":
+          {
+            "latitude": 34.558549,
+            "longitude": -82.688667
+          },
+        "name": "🚥 Start Line",
+        "identifiers": []
+      },
+      "stop_list_label": "🚏 Checkpoints",
+      "id": "4",
+      "customer_name": "🏖 Challenger: Shari Do'lo - Audi Le Mans Quattro",
+      "display_identifier": "Road to the Coast",
+      "current": false,
+      "special_notes": "This race is a little different than most. It's a time trial against 🏖 Shari Do'lo. You have 3 hours to traverse the 239 miles between Northlake and Charleston in order to beat Do'lo's time, with no predetermined route. The trip time is estimated to be 4 hours, you will have to shave a lot of time off the route to make it in time. If you make it under the time limit, you win.",
+      "load_status_title": "Status:",
+      "sort": 4,
+      "load_status_label": "Race Available",
+      "load_status": "RaceAvailable",
+      "active": true,
+      "shipper":
+        {
+          "stop_number": 2,
+          "stop_type": "Charleston",
+          "city": "Charleston",
+          "state": "SC",
+          "location":
+            {
+              "latitude": 32.780707,
+              "longitude": -79.931563
+            },
+          "name": "🏁 Finish Line",
+          "identifiers": []
+        },
+      "display_identifier_title": "Race:",
+      "order_number": "4-1"
+    }
+  ]
+  

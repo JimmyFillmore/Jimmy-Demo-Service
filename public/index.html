@@ -1,0 +1,17 @@
+<h1> User Interface </h1>
+
+<h3>Add user to database</h3>
+<form action="/api/user" method="POST">
+    <input name="name" placeholder="Full Name/username" type="text" required/>
+    <input name="api_token" placeholder="api token" type="text" required/>
+    <input name="userinfo" placeholder="JSON.user" type="text" required/>
+    <input name="loads" placeholder="JSON.loads" type="text" required/>
+
+    <button type="submit">Submit</button>
+</form>
+<h3>Delete user from database</h3>
+<form action="/api/user/delete" method="POST">
+    <input name="name" placeholder="Full Name" type="text" required/>
+
+    <button type="submit">Delete</button>
+</form>
