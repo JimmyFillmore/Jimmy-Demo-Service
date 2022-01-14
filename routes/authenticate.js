@@ -12,12 +12,6 @@ router
         console.log(token);
         console.log(process.env.eleos_platform_key)
 
-        jwt.verify(token, (err, decoded) => {
-            if (err) return res.sendStatus(403);
-            console.log('decoded this /n')
-            console.log(decoded)
-        });
-
         try {
             const user = await database.query(`
                 SELECT
@@ -30,6 +24,11 @@ router
                 apiToken: token
             });
             
+            jwt.decode(token, (err, decoded) => {
+                if (err) return res.sendStatus(403);
+                console.log('decoded this /n')
+                console.log(decoded)
+            });
 
             res.status(200).send(testUserData);
             res.end();
