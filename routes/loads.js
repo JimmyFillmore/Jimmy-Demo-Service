@@ -1,12 +1,10 @@
 const express = require('express');
-const { load } = require('nodemon/lib/config');
 const database = require('../database')
 const jwt = require('jsonwebtoken')
 const router = express.Router();
 
 //
 const testLoadData = require('../test_data/loads.json');
-const { token } = require('morgan');
 //
 
 
@@ -25,10 +23,12 @@ router
         }
 
         const decoded = jwt.decode(Token);
+        console.log(decoded)
         //testing try catch in case the payload cant catch the first variable
         var decodedName
         try {
             decodedName = Object.values(decoded)[0];
+            console.log(decodedName)
         } catch (e) {
             console.error('Error with token');
             res.status(500).send({'Error': '500 error with token'});

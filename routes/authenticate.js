@@ -3,7 +3,6 @@ const database = require('../database')
 const jwt = require('jsonwebtoken')
 //
 const testUserData = require('../test_data/users.json');
-const { user } = require('pg/lib/defaults');
 //
 const router = express.Router();
 
