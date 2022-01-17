@@ -21,7 +21,7 @@ router
             res.status(500).send({'Error': '500 error with authorization format'});
             res.end();
         }
-
+        console.log(Token)
         const decoded = jwt.decode(Token);
         console.log(decoded)
         //testing try catch in case the payload cant catch the first variable
