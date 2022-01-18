@@ -18,7 +18,6 @@ router
                 checkHandle: handle
             });
     
-        console.log(checkHandle);
         if (!checkHandle) {
             try {
                 await database.execute(`
@@ -35,7 +34,6 @@ router
                 });
 
                 body.handle = handle;
-                console.log(body);
                 res.status(200);
                 res.end('Added message to database');
             } catch (e) {
