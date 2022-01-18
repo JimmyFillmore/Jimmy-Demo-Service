@@ -21,14 +21,12 @@ router
             res.status(500).send({'Error': '500 error with authorization format'});
             res.end();
         }
-        console.log(Token)
         const decoded = jwt.decode(Token);
-        console.log(decoded)
+
         //testing try catch in case the payload cant catch the first variable
         var decodedName
         try {
             decodedName = Object.values(decoded)[0];
-            console.log(decodedName)
         } catch (e) {
             console.error('Error with token');
             res.status(500).send({'Error': '500 error with token'});
@@ -50,8 +48,6 @@ router
             `, {
                 decodedName: decodedName
             });
-
-            console.log(loadData);
             res.status(200).send(loadData);
         } catch (e) {
             console.error('Error getting database information');

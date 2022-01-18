@@ -14,17 +14,6 @@ router
             ORDER BY
                 full_name DESC
         `)
-        /*
-        .then((res) => {
-            console.log(res);
-        })
-        .catch((e) => {
-            console.error(e);
-        })
-        .finally(() => {
-            database.close();
-        })
-        */
         res.json(users);
     })
     

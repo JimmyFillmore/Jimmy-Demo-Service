@@ -7,7 +7,7 @@ router
     .put('/:handle', async (req, res) => {
         const { handle } = req.params;
         const body = req.body;
-        const checkHandle = await database.query(`
+        const checkHandle = await database.exists(`
             SELECT
                 *
             FROM
@@ -19,7 +19,7 @@ router
             });
     
         console.log(checkHandle);
-        if (checkHandle.handle != handle) {
+        if (!checkHandle) {
             try {
                 await database.execute(`
                     INSERT INTO messages (

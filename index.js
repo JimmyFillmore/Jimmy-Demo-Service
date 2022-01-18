@@ -6,11 +6,6 @@ const app = express();
 
 const routes = require('./routes/index');
 
-//keys
-const api_key = process.env.api_key;
-const eleos_platform_key = process.env.eleos_platform_key;
-const user_key = process.env.user_key;
-
 //to read .json file
 const fs = require('fs');
 
