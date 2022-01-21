@@ -24,6 +24,7 @@ router
         const decoded = jwt.decode(Token);
 
         //testing try catch in case the payload cant catch the first variable
+        // DRY Do not repeat yourself, make function
         var decodedName
         try {
             decodedName = Object.values(decoded)[0];

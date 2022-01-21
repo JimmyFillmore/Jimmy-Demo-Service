@@ -7,6 +7,8 @@ router
     .put('/:handle', async (req, res) => {
         const { handle } = req.params;
         const body = req.body;
+        
+        // check if handle exists
         const checkHandle = await database.exists(`
             SELECT
                 *
@@ -17,7 +19,8 @@ router
             `, {
                 checkHandle: handle
             });
-    
+        
+        // if handle does not exist, input into table // else duplicate handle
         if (!checkHandle) {
             try {
                 await database.execute(`
@@ -42,6 +45,7 @@ router
                 res.end();
             };
         }
+        // if duplicate send 200 and update message
         else {
             console.error('Duplicate handle');
             res.status(409).send({'description': 'Duplicate handle', 'code': '409'});
